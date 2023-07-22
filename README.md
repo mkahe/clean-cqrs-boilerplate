@@ -10,7 +10,7 @@ This is a boilerplate project of the combination of _Clean Architecture_ and _CQ
 The project follows the CQRS pattern to separate read and write operations. Although you might see that read/write databases are almost the same, it is not challenging to segragate these two layers (Maybe I do that sometime soon)
 
 #### Mediator
-I've employed the Mediator pattern to enable loose coupling between components and facilitate communication between different parts of the application efficiently. I have employed the powerful NuGet library [MediateR](https://github.com/longjp/mediateR) for this case.
+I've employed the Mediator pattern to enable loose coupling between components and facilitate communication between different parts of the application efficiently. I have employed the powerful NuGet library [MediateR](https://github.com/jbogard/MediatR) for this case.
 
 #### Automapper
 Automapper simplifies the mapping of data between objects, reducing boilerplate code and enhancing code readability.
