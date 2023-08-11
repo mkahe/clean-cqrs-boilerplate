@@ -14,7 +14,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Commands.DeleteLeave
     {
         private readonly ILeaveTypeRepository _leaveTypeRepository;
 
-        public DeleteLeaveTypeCommandHandler(IMapper mapper, ILeaveTypeRepository leaveTypeRepository) => _leaveTypeRepository = leaveTypeRepository;
+        public DeleteLeaveTypeCommandHandler(ILeaveTypeRepository leaveTypeRepository) => _leaveTypeRepository = leaveTypeRepository;
 
         public async Task<Unit> Handle(DeleteLeaveTypeCommand request, CancellationToken cancellationToken)
         {

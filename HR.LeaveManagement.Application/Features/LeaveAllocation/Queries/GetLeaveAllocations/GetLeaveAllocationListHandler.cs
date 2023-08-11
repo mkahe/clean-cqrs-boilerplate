@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 using HR.LeaveManagement.Application.Contracts.Persistence;
-using HR.LeaveManagement.Application.Features.LeaveAllocation.Queries.GetLeaveAllocations;
 using MediatR;
 
-namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Queries
+namespace HR.LeaveManagement.Application.Features.LeaveAllocation.Queries.GetLeaveAllocations
 {
     public class GetLeaveAllocationListHandler : IRequestHandler<GetLeaveAllocationListQuery, List<LeaveAllocationDto>>
     {

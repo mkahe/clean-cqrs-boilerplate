@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
 using HR.LeaveManagement.Application.Contracts.Persistence;
-using HR.LeaveManagement.Application.DTOs.LeaveAllocation.Validators;
 using HR.LeaveManagement.Application.Exceptions;
-using HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Commands;
 using MediatR;
 
-namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Commands
+namespace HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.UpdateLeaveAllocation
 {
     public class UpdateLeaveAllocationCommandHandler : IRequestHandler<UpdateLeaveAllocationCommand, Unit>
     {
@@ -19,8 +17,8 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Comm
             ILeaveAllocationRepository leaveAllocationRepository)
         {
             _mapper = mapper;
-            this._leaveTypeRepository = leaveTypeRepository;
-            this._leaveAllocationRepository = leaveAllocationRepository;
+            _leaveTypeRepository = leaveTypeRepository;
+            _leaveAllocationRepository = leaveAllocationRepository;
         }
 
         public async Task<Unit> Handle(UpdateLeaveAllocationCommand request, CancellationToken cancellationToken)

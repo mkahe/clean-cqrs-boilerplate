@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
 using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.LeaveManagement.Application.Exceptions;
-using HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Commands;
 using MediatR;
 
-namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Commands
+namespace HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.DeleteLeaveAllocation
 {
     public class DeleteLeaveAllocationCommandHandler : IRequestHandler<DeleteLeaveAllocationCommand, Unit>
     {
@@ -13,7 +12,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Comm
 
         public DeleteLeaveAllocationCommandHandler(ILeaveAllocationRepository leaveAllocationRepository, IMapper mapper)
         {
-            this._leaveAllocationRepository = leaveAllocationRepository;
+            _leaveAllocationRepository = leaveAllocationRepository;
             _mapper = mapper;
         }
 
