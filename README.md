@@ -25,3 +25,4 @@ I hope this boilerplate will accelerate your development process and provide a s
 
 ## TODO
 Using Mock and Shouldly
+Entity Framework Inmemory
