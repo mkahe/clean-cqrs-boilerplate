@@ -22,3 +22,6 @@ I have implemented custom exceptions (HR.LeaveManagement.Application project) to
 Fluent Validation NuGet library helps to define and enforce validation rules in a clear and concise manner.
 
 I hope this boilerplate will accelerate your development process and provide a solid foundation for your projects. Feel free to customize it further based on your specific requirements and add your own functionalities. Happy coding!
+
+## TODO
+Using Mock and Shouldly

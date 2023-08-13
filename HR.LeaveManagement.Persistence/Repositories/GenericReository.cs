@@ -20,11 +20,10 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity, 
         _context = context;
     }
 
-    public async Task<T> CreateAsync(T entity)
+    public async Task CreateAsync(T entity)
     {
         await _context.AddAsync(entity);
         await _context.SaveChangesAsync();
-        return entity;
     }
 
     public async Task DeleteAsync(T entity)
@@ -44,13 +43,12 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity, 
         return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
     }
 
-    public async Task<T> UpdateAsync(T entity)
+    public async Task UpdateAsync(T entity)
     {
         // Every field will be updated in this case
         //_context.Update(entity);
 
         _context.Entry(entity).State = EntityState.Modified;
         await _context.SaveChangesAsync();
-        return entity;
     }
 }

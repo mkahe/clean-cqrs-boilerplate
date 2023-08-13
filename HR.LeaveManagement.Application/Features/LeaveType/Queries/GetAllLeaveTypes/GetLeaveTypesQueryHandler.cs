@@ -14,11 +14,11 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveT
     {
         private readonly IMapper _mapper;
         private readonly ILeaveTypeRepository _leaveTypeRepository;
-        private readonly IAppLogger<GetLeaveTypeDetailsQueryHandler> _logger;
+        private readonly IAppLogger<GetLeaveTypesQueryHandler> _logger;
 
         public GetLeaveTypesQueryHandler(IMapper mapper
             , ILeaveTypeRepository leaveTypeRepository
-            , IAppLogger<GetLeaveTypeDetailsQueryHandler> logger)
+            , IAppLogger<GetLeaveTypesQueryHandler> logger)
         {
             _mapper = mapper;
             _leaveTypeRepository = leaveTypeRepository;
