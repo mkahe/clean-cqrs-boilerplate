@@ -23,6 +23,8 @@ Fluent Validation NuGet library helps to define and enforce validation rules in 
 
 I hope this boilerplate will accelerate your development process and provide a solid foundation for your projects. Feel free to customize it further based on your specific requirements and add your own functionalities. Happy coding!
 
-## TODO
+## TODO Automation
 Using Mock and Shouldly
 Entity Framework Inmemory
+
+## TODO NSWAG
