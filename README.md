@@ -28,3 +28,5 @@ Using Mock and Shouldly
 Entity Framework Inmemory
 
 ## TODO NSWAG
+
+## TODO Identity.Core
