@@ -67,13 +67,16 @@ namespace HR.LeaveManagement.Persistence.Migrations
                     b.Property<bool?>("Approved")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("Cancelled")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("DateCreated")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DateModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateRequest")
+                    b.Property<DateTime>("DateRequested")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("EndDate")
@@ -129,8 +132,8 @@ namespace HR.LeaveManagement.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2023, 7, 30, 12, 40, 4, 389, DateTimeKind.Local).AddTicks(3811),
-                            DateModified = new DateTime(2023, 7, 30, 12, 40, 4, 389, DateTimeKind.Local).AddTicks(3880),
+                            DateCreated = new DateTime(2023, 9, 4, 14, 56, 21, 189, DateTimeKind.Local).AddTicks(8775),
+                            DateModified = new DateTime(2023, 9, 4, 14, 56, 21, 189, DateTimeKind.Local).AddTicks(8844),
                             DefaultDays = 10,
                             Name = "Vacation"
                         });
