@@ -1,19 +1,19 @@
 ﻿using HR.LeaveManagement.API.Middleware.Models;
 using HR.LeaveManagement.Application.Exceptions;
-using SendGrid.Helpers.Errors.Model;
+using Newtonsoft.Json;
 using System.Net;
-using BadRequestException = HR.LeaveManagement.Application.Exceptions.BadRequestException;
-using NotFoundException = HR.LeaveManagement.Application.Exceptions.NotFoundException;
 
-namespace HR.LeaveManagement.API.Middleware
+namespace HR.LeaveManagement.Api.Middleware
 {
     public class ExceptionMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly ILogger<ExceptionMiddleware> _logger;
 
-        public ExceptionMiddleware(RequestDelegate next)
+        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
         {
             _next = next;
+            this._logger = logger;
         }
 
         public async Task InvokeAsync(HttpContext httpContext)
@@ -40,20 +40,20 @@ namespace HR.LeaveManagement.API.Middleware
                     problem = new CustomProblemDetails
                     {
                         Title = badRequestException.Message,
-                        Status = (int) statusCode,
+                        Status = (int)statusCode,
                         Detail = badRequestException.InnerException?.Message,
                         Type = nameof(BadRequestException),
                         Errors = badRequestException.ValidationErrors
                     };
                     break;
-                case NotFoundException notFoundException:
-                    statusCode = HttpStatusCode.BadRequest;
+                case NotFoundException NotFound:
+                    statusCode = HttpStatusCode.NotFound;
                     problem = new CustomProblemDetails
                     {
-                        Title = notFoundException.Message,
+                        Title = NotFound.Message,
                         Status = (int)statusCode,
                         Type = nameof(NotFoundException),
-                        Detail = notFoundException.InnerException?.Message,
+                        Detail = NotFound.InnerException?.Message,
                     };
                     break;
                 default:
@@ -67,8 +67,11 @@ namespace HR.LeaveManagement.API.Middleware
                     break;
             }
 
-            httpContext.Response.StatusCode = (int) statusCode;
+            httpContext.Response.StatusCode = (int)statusCode;
+            var logMessage = JsonConvert.SerializeObject(problem);
+            _logger.LogError(logMessage);
             await httpContext.Response.WriteAsJsonAsync(problem);
+
         }
     }
 }

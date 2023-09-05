@@ -30,3 +30,5 @@ Entity Framework Inmemory
 ## TODO NSWAG
 
 ## TODO Identity.Core
+
+## TODO Add rowversion

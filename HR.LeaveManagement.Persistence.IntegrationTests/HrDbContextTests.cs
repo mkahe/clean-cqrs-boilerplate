@@ -19,7 +19,7 @@ namespace HR.LeaveManagement.Persistence.IntegrationTests
             var dbOptions = new DbContextOptionsBuilder<HrDatabaseContext>()
                 .UseInMemoryDatabase(Guid.NewGuid().ToString()).Options;
 
-            _hrDatabaseContext = new HrDatabaseContext(dbOptions);
+            _hrDatabaseContext = new HrDatabaseContext(dbOptions, null); // TODO: fill with user service
         }
 
         [Fact]
