@@ -65,7 +65,7 @@ The structure consisting of the following components:
 1. `HR.LeaveManagement.Api`: This section contains the API layer of the project.
 
 The following figure illustrates each component with class libraries inside, and also their dependencies to the other modules.
-![alt text](/img/clean-architecture.png)
+![alt text](/clean-architecture.png)
 
 ### TODO Tasks
 Of course the application is not perfect and is yet to be matured. Feel free to add some issues. I am more than happy if you like to contribute to enhance the code.
