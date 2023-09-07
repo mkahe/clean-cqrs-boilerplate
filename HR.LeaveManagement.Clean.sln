@@ -37,6 +37,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Persiste
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Identity", "HR.LeaveManagement.Identity\HR.LeaveManagement.Identity.csproj", "{78A579F2-C39F-4643-880B-BC1407637514}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{F1770A67-FDB8-4934-AD72-7957ED4DB042}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\clean-architecture.png = ..\..\..\Downloads\clean-architecture.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +97,7 @@ Global
 		{0A897930-7D1B-4776-A0E2-FBF8FEA4AC7E} = {9F53DDA6-3F9D-4823-B702-773886F64FC2}
 		{41EC918F-019A-48B9-87BB-DE3E1CA19464} = {9F53DDA6-3F9D-4823-B702-773886F64FC2}
 		{78A579F2-C39F-4643-880B-BC1407637514} = {D8B5EE7A-6E39-4582-84ED-0824EF96BA64}
+		{F1770A67-FDB8-4934-AD72-7957ED4DB042} = {FB7CF35D-4257-46C4-AFBF-CCACF0B9A916}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74FCA271-7137-4060-9B45-B487AF817AFF}
