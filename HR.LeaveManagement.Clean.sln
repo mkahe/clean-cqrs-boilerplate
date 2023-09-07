@@ -22,7 +22,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB7CF35D-4257-46C4-AFBF-CCACF0B9A916}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		..\..\..\Downloads\clean-architecture.png = ..\..\..\Downloads\clean-architecture.png
 		README.md = README.md
 	EndProjectSection
 EndProject
