@@ -51,6 +51,10 @@ In order to run the project on the development mode, follow these steps:
 1. Go to solution properties and set HR.LeaveManagement.Api as startup project.
 1. Hit the run button or use .Net CLI
 
+When everythig goes well, you will see the swagger page:
+
+![swagger](swagger.png)
+
 #### Production Mode
 TODO
 

@@ -17,6 +17,8 @@ namespace HR.LeaveManagement.Identity
     {
         public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration configuration)
         {
+            // Using Options pattern and create a concrete object of JwtSettings
+            // more in https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-7.0
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
 
             services.AddDbContext<HrLeaveManagementIdentityDbContext>(options =>
